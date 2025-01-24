@@ -63,11 +63,11 @@ main() {
   readonly wt_enabled
 
   local right_separator
-  right_separator="$(get_tmux_option "@doomchad_right_separator" "")"
+  right_separator="$(get_tmux_option "@doomchad_right_separator" "█")"
   readonly right_separator
 
   local left_separator
-  left_separator="$(get_tmux_option "@doomchad_left_separator" "")"
+  left_separator="$(get_tmux_option "@doomchad_left_separator" "█")"
   readonly left_separator
 
   local user

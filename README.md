@@ -45,8 +45,8 @@ By default, the theme will use a round separator for left and right.
 To overwrite it use `@doomchad_left_separator` and `@doomchad_right_separator` 
 
 ```sh
-set -g @doomchad_left_separator "█"
-set -g @doomchad_right_separator "█"
+set -g @doomchad_left_separator ""
+set -g @doomchad_right_separator ""
 ```
 
 ##### Enable User
