@@ -60,7 +60,7 @@ main() {
   # NOTE: Checking for the value of @doomchad_window_tabs_enabled
   local wt_enabled
   wt_enabled="$(get_tmux_option "@doomchad_window_tabs_enabled" "off")"
-  readonly "off"
+  readonly wt_enabled
 
   local right_separator
   right_separator="$(get_tmux_option "@doomchad_right_separator" "")"
@@ -77,10 +77,6 @@ main() {
   local host
   host="$(get_tmux_option "@doomchad_host" "off")"
   readonly host
-
-  local date_time
-  date_time="$(get_tmux_option "@doomchad_date_time" "off")"
-  readonly date_time
 
   # These variables are the defaults so that the setw and set calls are easier to parse.
   local show_directory
@@ -114,9 +110,6 @@ main() {
   local show_host
   readonly show_host="#[fg=$thm_orange,bg=$thm_dark_gray]$right_separator#[fg=$thm_bg,bg=$thm_orange]󰒋 #[fg=$thm_fg,bg=$thm_gray] #H "
 
-  local show_date_time
-  readonly show_date_time="#[fg=$thm_orange,bg=$thm_dark_gray]$right_separator#[fg=$thm_bg,bg=$thm_orange] #[fg=$thm_fg,bg=$thm_gray] $date_time "
-
   # Right column 1 by default shows the Window name.
   local right_column1=$show_window
 
@@ -143,21 +136,12 @@ main() {
     right_column2=$right_column2$show_host
   fi
 
-  if [[ "${date_time}" != "off" ]]; then
-    right_column2=$right_column2$show_date_time
-  fi
-
   set status-left ""
 
   set status-right "${right_column1},${right_column2}"
 
   setw window-status-format "${window_status_format}"
   setw window-status-current-format "${window_status_current_format}"
-
-  # --------=== Modes
-  #
-  setw clock-mode-colour "${thm_blue}"
-  setw mode-style "fg=${thm_red} bg=${thm_black4} bold"
 
   tmux "${tmux_commands[@]}"
 }

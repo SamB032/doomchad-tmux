@@ -49,15 +49,6 @@ set -g @doomchad_left_separator "█"
 set -g @doomchad_right_separator "█"
 ```
 
-##### Enable DateTime
-
-By default, the `date_time` componenet is set to off.
-It can be enabled by specifing any tmux date and time format.
-
-```sh
-set -g @doomchad_date_time "%Y-%m-%d %H:%M"
-```
-
 ##### Enable User
 
 By default, the `user` componenet is set to off.
