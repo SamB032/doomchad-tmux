@@ -1,0 +1,14 @@
+# NOTE: you can use vars with $<var> and ${<var>} as long as the str is double quoted: ""
+# WARNING: hex colors can't contain capital letters
+
+# --> Doomchad theme
+thm_bg="#282c34"
+thm_fg="#bbc2cf"
+thm_black="#181825"
+thm_light_gray="#3A3E46"
+thm_dark_gray="#2D3139"
+thm_red="#ff6b5a"
+thm_green="#98be65"
+thm_blue="#51afef"
+thm_orange="#fab387"
+thm_black4="#585b70"
